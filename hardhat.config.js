@@ -5,7 +5,6 @@ require("@nomiclabs/hardhat-waffle");
 // https://hardhat.org/guides/create-task.html
 task("accounts", "Prints the list of accounts", async () => {
   const accounts = await ethers.getSigners();
-
   for (const account of accounts) {
     console.log(account.address);
   }
@@ -18,6 +17,16 @@ task("accounts", "Prints the list of accounts", async () => {
  * @type import('hardhat/config').HardhatUserConfig
  */
 module.exports = {
-  solidity: "0.6.0",
+  solidity: "0.6.2",
+  networks: {
+      ganache: {
+        url: "http://127.0.0.1:7545"
+      },
+      rinkeby: {
+        url: "https://rinkeby.infura.io/v3/123abc123abc123abc123abc123abcde",
+        // accounts: [privateKey1, privateKey2 ]
+      }
+    }
 };
+
 
