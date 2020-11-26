@@ -61,16 +61,43 @@ task("deploy", "Prints the list of accounts", async () => {
   };
 });
 
+
+task("network", "Prints an account's balance")
+  //.addParam("account", "The account's address")
+  .setAction(async taskArgs => {
+     const provider = ethers.getDefaultProvider( "http://127.0.0.1:7545");
+     console.log(provider);
+     //const account = web3.utils.toChecksumAddress(taskArgs.account);
+     //const network = ethers.providers.getNetwork('homestead');
+     //
+     // When using a Web3 provider, the network will be automatically detected
+     // e.g. HTTP provider
+     // let currentProvider = new web3.providers.HttpProvider('http://localhost:8545');
+     // 
+     // let web3Provider = new ethers.providers.Web3Provider(currentProvider);
+     // const network = ethers.providers.getNetwork();
+     // const networkName= network.name;
+     // console.log(networkName);
+     // const networkAddress = network.ensAddress;
+     // console.log(networkAddress);
+     // const netWorkId = network.chainId;
+     // console.log(netWorkId);
+
+     //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
+});
+
 task("balance", "Prints an account's balance")
   .addParam("account", "The account's address")
   .setAction(async taskArgs => {
-    const provider = ethers.getDefaultProvider();
-    //const account = web3.utils.toChecksumAddress(taskArgs.account);
-    const balance = await provider.getBalance(taskArgs.account);
+      //const provider = ethers.getDefaultProvider();
+      //const provider = ethers.getDefaultProvider("http://127.0.0.1:7545");
+      const provider = ethers.getDefaultProvider();
+      //const account = web3.utils.toChecksumAddress(taskArgs.account);
+      const balance = await provider.getBalance(taskArgs.account);
 
-    //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
-    console.log(balance);
-  });
+      //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
+      console.log(balance);
+});
 
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
@@ -80,6 +107,7 @@ task("balance", "Prints an account's balance")
  */
 module.exports = {
   solidity: "0.6.2",
+  defaultNetwork: 'ganache',
   networks: {
       ganache: {
         url: "http://127.0.0.1:7545"
@@ -90,6 +118,7 @@ module.exports = {
       }
     }
 };
+
 
 
 
