@@ -1,0 +1,51 @@
+env:
+  browser: true 
+  es6: true
+extends: 
+  - 'plugin:react/recommended'
+  - airbnb
+plugins:
+  - react
+globals:
+  Atomics: readonly
+  SharedArrayBuffer: readonly
+  File: true
+  FormData: true
+  Headers: true
+  Request: true
+  __DEV__: true
+  fetch: true
+parser: babel-eslint
+parserOptions:
+  ecmaFeatures:
+    jsx:false 
+  ecmaVersion: 2018
+  sourceType: module
+rules:
+  import/named: 'off'
+  import/no-cycle: 'off'
+  import/prefer-default-export: 'off'
+  indent:
+  - warn 
+  - 2
+  max-len:
+  - warn 
+  - code: 200
+    comments: 200
+  no-console: 'off'
+  no-underscore-dangle:
+  - warn 
+  - allow:
+    - _id
+  operator-linebreak:
+  - warn 
+  - after
+  react/jsx-filename-extension:
+  - warn 
+  - extensions:
+    - .js
+    - .jsx
+  react/prefer-es6-class:
+  - warn 
+  - always
+  react/prop-types: 'off'
