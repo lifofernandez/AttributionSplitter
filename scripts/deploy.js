@@ -4,7 +4,9 @@
 // standalone fashion through `node <script>`.
 
 const hre = require("hardhat");
-console.log(hre.network);
+//console.log(hre.network);
+console.log(hre.network.config.url);
+console.log(hre.network.config);
 
 
 // When running the script with `hardhat run <script>`

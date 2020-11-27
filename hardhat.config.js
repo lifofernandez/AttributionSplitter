@@ -1,5 +1,6 @@
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-web3");
+require('hardhat-deploy');
 
 
 // This is a sample Hardhat task.
@@ -14,6 +15,10 @@ task("accounts", "Prints the list of accounts", async () => {
 
 task("deploy", "Prints the list of accounts", async () => {
 
+  const provider = ethers.getDefaultProvider(
+   'http://localhost:7545'
+  );
+  console.log( "Provider URL:", provider.connection.url);
   const [
     owner,
     tenedor1,
@@ -36,6 +41,7 @@ task("deploy", "Prints the list of accounts", async () => {
   // to make sure everything is compiled
   // await hre.run('compile');
 
+
   // We get the contract to deploy
   const AttributionSplitter = await ethers.getContractFactory(
     "AttributionSplitter"
@@ -47,8 +53,16 @@ task("deploy", "Prints the list of accounts", async () => {
 
   await attributionsplitter.deployed();
   console.log(
-    "AttributionSplitter deployed to:\n",
+    "Contract name: AttributionSplitter",
+     //attributionsplitter
+  );
+  console.log(
+    "Contract address:",
      attributionsplitter.address
+  );
+  console.log(
+    "Signer address:",
+     attributionsplitter.signer.address
   );
 
   const totalShares = await attributionsplitter.totalShares();
@@ -57,7 +71,7 @@ task("deploy", "Prints the list of accounts", async () => {
   for ( const [ i , t ] of tenedores.entries() )  {
     const p = await attributionsplitter.payee(i);
     const s = await attributionsplitter.shares(p);
-    console.log("Payee:", p,"Shares:", s.toString());
+    console.log("Payee", i,":",p,"Shares:", s.toString());
   };
 });
 
@@ -66,7 +80,7 @@ task("network", "Prints an account's balance")
   //.addParam("account", "The account's address")
   .setAction(async taskArgs => {
      const provider = ethers.getDefaultProvider('http://localhost:7545');
-     console.log(provider);
+     console.log(provider.connection.url);
      //const account = web3.utils.toChecksumAddress(taskArgs.account);
      //const network = ethers.providers.getNetwork('homestead');
     
@@ -75,8 +89,8 @@ task("network", "Prints an account's balance")
      //const currentProvider = new web3.providers.HttpProvider('http://localhost:7545');
      //console.log(currentProvider);
 
-     const web3Provider = new ethers.providers.Web3Provider(provider);
-     console.log(web3Provider);
+     //const web3Provider = new ethers.providers.Web3Provider(provider);
+     //console.log(web3Provider);
 
      //const network = ethers.providers.getNetwork("rinkeby");
      //const network = provider.getNetwork();
@@ -113,6 +127,7 @@ task("balance", "Prints an account's balance")
 module.exports = {
   solidity: "0.6.2",
   defaultNetwork: 'ganache',
+  //defaultNetwork: 'development',
   networks: {
       ganache: {
         url: "http://127.0.0.1:7545"
@@ -123,6 +138,9 @@ module.exports = {
       }
     }
 };
+
+
+
 
 
 

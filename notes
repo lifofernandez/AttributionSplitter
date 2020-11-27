@@ -1,0 +1,10 @@
+
+hre.network.config.url works for you?
+This only works for JSON-RPC networks though, it's undefined for the in-memory hardhat network
+Dan Octavian replied to fvictorioToday at 10:28 AM
+it's undefined for me, it's the in-memory hardhat network, so basically the in-memory hardhat network doesn't expose endpoints you can make requests to?
+fvictorioToday at 10:29 AM
+Yes, that's correct
+If you want a hardhat network with an HTTP endpoint, use npx hardhat node and then connect to it with npx hardhat <task> --network localhost
+Dan Octavian replied to fvictorioToday at 10:36 AM
+thanks let me give that a shot
