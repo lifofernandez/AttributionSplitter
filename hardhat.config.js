@@ -1,6 +1,7 @@
 require("@nomiclabs/hardhat-waffle");
 //require("@nomiclabs/hardhat-web3");
 
+
 // This is a sample Hardhat task.
 // To learn how to create your own go to
 // https://hardhat.org/guides/create-task.html
@@ -25,7 +26,6 @@ task("deploy", "Prints the list of accounts", async () => {
    tenedor2.address,
    tenedor3.address
   ] 
-
   const partes =  [ 4, 3, 5 ]
   
   // Hardhat always runs the compile task when
@@ -65,23 +65,27 @@ task("deploy", "Prints the list of accounts", async () => {
 task("network", "Prints an account's balance")
   //.addParam("account", "The account's address")
   .setAction(async taskArgs => {
-     const provider = ethers.getDefaultProvider( "http://127.0.0.1:7545");
+     const provider = ethers.getDefaultProvider('http://localhost:7545');
      console.log(provider);
      //const account = web3.utils.toChecksumAddress(taskArgs.account);
      //const network = ethers.providers.getNetwork('homestead');
-     //
+    
      // When using a Web3 provider, the network will be automatically detected
      // e.g. HTTP provider
-     // let currentProvider = new web3.providers.HttpProvider('http://localhost:8545');
-     // 
-     // let web3Provider = new ethers.providers.Web3Provider(currentProvider);
-     // const network = ethers.providers.getNetwork();
-     // const networkName= network.name;
-     // console.log(networkName);
-     // const networkAddress = network.ensAddress;
-     // console.log(networkAddress);
-     // const netWorkId = network.chainId;
-     // console.log(netWorkId);
+     //const currentProvider = new web3.providers.HttpProvider('http://localhost:7545');
+     //console.log(currentProvider);
+
+     const web3Provider = new ethers.providers.Web3Provider(provider);
+     console.log(web3Provider);
+
+     //const network = provider.getNetwork();
+     //const network = ethers.providers.getNetwork('homestead');
+     //const networkName = network.name;
+     //console.log(networkName);
+     //const networkAddress = network.ensAddress;
+     //console.log(networkAddress);
+     //const netWorkId = network.chainId;
+     //console.log(netWorkId);
 
      //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
 });

@@ -1,0 +1,2238 @@
+Environment {
+  config: {
+    solidity: { compilers: [Array], overrides: {} },
+    defaultNetwork: 'ganache',
+    networks: {
+      hardhat: [Object],
+      localhost: [Object],
+      ganache: [Object],
+      rinkeby: [Object]
+    },
+    paths: {
+      root: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter',
+      configFile: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/hardhat.config.js',
+      sources: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/contracts',
+      cache: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/cache',
+      artifacts: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/artifacts',
+      tests: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/test'
+    },
+    mocha: { timeout: 20000 }
+  },
+  hardhatArguments: {
+    network: undefined,
+    showStackTraces: false,
+    version: false,
+    help: false,
+    emoji: false,
+    config: undefined,
+    verbose: false,
+    maxMemory: undefined,
+    tsconfig: undefined
+  },
+  tasks: {
+    check: SimpleTaskDefinition {
+      name: 'check',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Check whatever you need'
+    },
+    'clean:global': SimpleTaskDefinition {
+      name: 'clean:global',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    clean: SimpleTaskDefinition {
+      name: 'clean',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Clears the cache and deletes all artifacts'
+    },
+    'compile:solidity:get-source-paths': SimpleTaskDefinition {
+      name: 'compile:solidity:get-source-paths',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-source-names': SimpleTaskDefinition {
+      name: 'compile:solidity:get-source-names',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-dependency-graph': SimpleTaskDefinition {
+      name: 'compile:solidity:get-dependency-graph',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-compilation-job-for-file': SimpleTaskDefinition {
+      name: 'compile:solidity:get-compilation-job-for-file',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-compilation-jobs': SimpleTaskDefinition {
+      name: 'compile:solidity:get-compilation-jobs',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:filter-compilation-jobs': SimpleTaskDefinition {
+      name: 'compile:solidity:filter-compilation-jobs',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:merge-compilation-jobs': SimpleTaskDefinition {
+      name: 'compile:solidity:merge-compilation-jobs',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:nothing-to-compile': SimpleTaskDefinition {
+      name: 'compile:solidity:log:nothing-to-compile',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:compile-jobs': SimpleTaskDefinition {
+      name: 'compile:solidity:compile-jobs',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-compiler-input': SimpleTaskDefinition {
+      name: 'compile:solidity:get-compiler-input',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:download-compiler-start': SimpleTaskDefinition {
+      name: 'compile:solidity:log:download-compiler-start',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:download-compiler-end': SimpleTaskDefinition {
+      name: 'compile:solidity:log:download-compiler-end',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:solc:get-build': SimpleTaskDefinition {
+      name: 'compile:solidity:solc:get-build',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:solcjs:run': SimpleTaskDefinition {
+      name: 'compile:solidity:solcjs:run',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:solc:run': SimpleTaskDefinition {
+      name: 'compile:solidity:solc:run',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:solc:compile': SimpleTaskDefinition {
+      name: 'compile:solidity:solc:compile',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:compile': SimpleTaskDefinition {
+      name: 'compile:solidity:compile',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:compilation-errors': SimpleTaskDefinition {
+      name: 'compile:solidity:log:compilation-errors',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:check-errors': SimpleTaskDefinition {
+      name: 'compile:solidity:check-errors',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:emit-artifacts': SimpleTaskDefinition {
+      name: 'compile:solidity:emit-artifacts',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-artifact-from-compilation-output': SimpleTaskDefinition {
+      name: 'compile:solidity:get-artifact-from-compilation-output',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:run-compiler-start': SimpleTaskDefinition {
+      name: 'compile:solidity:log:run-compiler-start',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:run-compiler-end': SimpleTaskDefinition {
+      name: 'compile:solidity:log:run-compiler-end',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:compile-job': SimpleTaskDefinition {
+      name: 'compile:solidity:compile-job',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:handle-compilation-jobs-failures': SimpleTaskDefinition {
+      name: 'compile:solidity:handle-compilation-jobs-failures',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:get-compilation-jobs-failure-reasons': SimpleTaskDefinition {
+      name: 'compile:solidity:get-compilation-jobs-failure-reasons',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity:log:compilation-result': SimpleTaskDefinition {
+      name: 'compile:solidity:log:compilation-result',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:solidity': SimpleTaskDefinition {
+      name: 'compile:solidity',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'compile:get-compilation-tasks': SimpleTaskDefinition {
+      name: 'compile:get-compilation-tasks',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    compile: SimpleTaskDefinition {
+      name: 'compile',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Compiles the entire project, building all artifacts'
+    },
+    console: SimpleTaskDefinition {
+      name: 'console',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Opens a hardhat console'
+    },
+    'flatten:get-flattened-sources': SimpleTaskDefinition {
+      name: 'flatten:get-flattened-sources',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Returns all contracts and their dependencies flattened'
+    },
+    'flatten:get-dependency-graph': SimpleTaskDefinition {
+      name: 'flatten:get-dependency-graph',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    flatten: SimpleTaskDefinition {
+      name: 'flatten',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: true,
+      _hasOptionalPositionalParam: true,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Flattens and prints contracts and their dependencies'
+    },
+    help: SimpleTaskDefinition {
+      name: 'help',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: true,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Prints this message'
+    },
+    'node:get-provider': SimpleTaskDefinition {
+      name: 'node:get-provider',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'node:create-server': SimpleTaskDefinition {
+      name: 'node:create-server',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'node:server-created': SimpleTaskDefinition {
+      name: 'node:server-created',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'node:server-ready': SimpleTaskDefinition {
+      name: 'node:server-ready',
+      isSubtask: true,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    node: SimpleTaskDefinition {
+      name: 'node',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Starts a JSON-RPC server on top of Hardhat Network'
+    },
+    run: SimpleTaskDefinition {
+      name: 'run',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Runs a user-defined script after compiling the project'
+    },
+    'test:get-test-files': SimpleTaskDefinition {
+      name: 'test:get-test-files',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: true,
+      _hasOptionalPositionalParam: true,
+      action: [AsyncFunction (anonymous)]
+    },
+    'test:setup-test-environment': SimpleTaskDefinition {
+      name: 'test:setup-test-environment',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    'test:run-mocha-tests': SimpleTaskDefinition {
+      name: 'test:run-mocha-tests',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: true,
+      _hasOptionalPositionalParam: true,
+      action: [AsyncFunction (anonymous)]
+    },
+    'test:show-fork-recommendations': SimpleTaskDefinition {
+      name: 'test:show-fork-recommendations',
+      isSubtask: true,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)]
+    },
+    test: SimpleTaskDefinition {
+      name: 'test',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [Array],
+      _positionalParamNames: [Set],
+      _hasVariadicParam: true,
+      _hasOptionalPositionalParam: true,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Runs mocha tests'
+    },
+    accounts: SimpleTaskDefinition {
+      name: 'accounts',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Prints the list of accounts'
+    },
+    deploy: SimpleTaskDefinition {
+      name: 'deploy',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: 'Prints the list of accounts'
+    },
+    network: SimpleTaskDefinition {
+      name: 'network',
+      isSubtask: false,
+      paramDefinitions: {},
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: "Prints an account's balance"
+    },
+    balance: SimpleTaskDefinition {
+      name: 'balance',
+      isSubtask: false,
+      paramDefinitions: [Object],
+      positionalParamDefinitions: [],
+      _positionalParamNames: Set(0) {},
+      _hasVariadicParam: false,
+      _hasOptionalPositionalParam: false,
+      action: [AsyncFunction (anonymous)],
+      _description: "Prints an account's balance"
+    }
+  },
+  run: [AsyncFunction (anonymous)],
+  artifacts: Artifacts {
+    _artifactsPath: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/artifacts',
+    _buildInfosGlob: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/artifacts/build-info/**/*.json',
+    _dbgsGlob: '/root/Documents/Academicos/UTN/BLOCKCHAIN/attribution/AttributionSplitter/artifacts/**/*.dbg.json'
+  },
+  network: {
+    name: 'ganache',
+    config: {
+      accounts: 'remote',
+      gas: 'auto',
+      gasPrice: 'auto',
+      gasMultiplier: 1,
+      httpHeaders: {},
+      timeout: 20000,
+      url: 'http://127.0.0.1:7545'
+    },
+    provider: BackwardsCompatibilityProviderAdapter {
+      _wrapped: AutomaticGasPriceProvider {
+        _wrapped: AutomaticGasProvider {
+          _wrapped: [AutomaticSenderProvider],
+          _wrappedProvider: [AutomaticSenderProvider],
+          _gasMultiplier: 1
+        },
+        _wrappedProvider: AutomaticGasProvider {
+          _wrapped: [AutomaticSenderProvider],
+          _wrappedProvider: [AutomaticSenderProvider],
+          _gasMultiplier: 1
+        }
+      },
+      _provider: AutomaticGasPriceProvider {
+        _wrapped: AutomaticGasProvider {
+          _wrapped: [AutomaticSenderProvider],
+          _wrappedProvider: [AutomaticSenderProvider],
+          _gasMultiplier: 1
+        },
+        _wrappedProvider: AutomaticGasProvider {
+          _wrapped: [AutomaticSenderProvider],
+          _wrappedProvider: [AutomaticSenderProvider],
+          _gasMultiplier: 1
+        }
+      },
+      sendAsync: [Function: bound sendAsync],
+      send: [Function: bound send],
+      _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+    }
+  },
+  _extenders: [
+    [Function (anonymous)],
+    [Function (anonymous)],
+    [Function (anonymous)]
+  ],
+  ethers: {
+    Contract: [Function: Contract] {
+      getContractAddress: [Function (anonymous)],
+      getInterface: [Function (anonymous)],
+      isIndexed: [Function (anonymous)]
+    },
+    ContractFactory: [Function: ContractFactory] {
+      fromSolidity: [Function (anonymous)],
+      getInterface: [Function (anonymous)],
+      getContractAddress: [Function (anonymous)],
+      getContract: [Function (anonymous)]
+    },
+    BigNumber: [Function: BigNumber] {
+      from: [Function (anonymous)],
+      isBigNumber: [Function (anonymous)]
+    },
+    FixedNumber: [Function: FixedNumber] {
+      fromValue: [Function (anonymous)],
+      fromString: [Function (anonymous)],
+      fromBytes: [Function (anonymous)],
+      from: [Function (anonymous)],
+      isFixedNumber: [Function (anonymous)]
+    },
+    Signer: [Function: Signer] { isSigner: [Function (anonymous)] },
+    VoidSigner: [Function: VoidSigner],
+    Wallet: [Function: Wallet] {
+      createRandom: [Function (anonymous)],
+      fromEncryptedJson: [Function (anonymous)],
+      fromEncryptedJsonSync: [Function (anonymous)],
+      fromMnemonic: [Function (anonymous)]
+    },
+    constants: {
+      AddressZero: '0x0000000000000000000000000000000000000000',
+      HashZero: '0x0000000000000000000000000000000000000000000000000000000000000000',
+      EtherSymbol: 'Ξ',
+      NegativeOne: BigNumber { _hex: '-0x01', _isBigNumber: true },
+      Zero: BigNumber { _hex: '0x00', _isBigNumber: true },
+      One: BigNumber { _hex: '0x01', _isBigNumber: true },
+      Two: BigNumber { _hex: '0x02', _isBigNumber: true },
+      WeiPerEther: BigNumber { _hex: '0x0de0b6b3a7640000', _isBigNumber: true },
+      MaxUint256: BigNumber {
+        _hex: '0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff',
+        _isBigNumber: true
+      }
+    },
+    providers: {
+      Provider: [Function: Provider] { isProvider: [Function (anonymous)] },
+      getNetwork: [Function: getNetwork],
+      BaseProvider: [Function: BaseProvider] {
+        getFormatter: [Function (anonymous)],
+        getNetwork: [Function (anonymous)]
+      },
+      Resolver: [Function: Resolver],
+      AlchemyProvider: [Function: AlchemyProvider] {
+        getWebSocketProvider: [Function (anonymous)],
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      AlchemyWebSocketProvider: [Function: AlchemyWebSocketProvider],
+      CloudflareProvider: [Function: CloudflareProvider] {
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      EtherscanProvider: [Function: EtherscanProvider],
+      FallbackProvider: [Function: FallbackProvider],
+      IpcProvider: [Function: IpcProvider],
+      InfuraProvider: [Function: InfuraProvider] {
+        getWebSocketProvider: [Function (anonymous)],
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      InfuraWebSocketProvider: [Function: InfuraWebSocketProvider],
+      JsonRpcProvider: [Function: JsonRpcProvider] {
+        defaultUrl: [Function (anonymous)],
+        hexlifyTransaction: [Function (anonymous)]
+      },
+      JsonRpcSigner: [Function: JsonRpcSigner],
+      NodesmithProvider: [Function: NodesmithProvider] {
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      PocketProvider: [Function: PocketProvider] {
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      StaticJsonRpcProvider: [Function: StaticJsonRpcProvider],
+      UrlJsonRpcProvider: [Function: UrlJsonRpcProvider] {
+        getApiKey: [Function (anonymous)],
+        getUrl: [Function (anonymous)]
+      },
+      Web3Provider: [Function: Web3Provider],
+      WebSocketProvider: [Function: WebSocketProvider] { defaultUrl: [Function (anonymous)] },
+      Formatter: [Function: Formatter] {
+        check: [Function (anonymous)],
+        allowNull: [Function (anonymous)],
+        allowFalsish: [Function (anonymous)],
+        arrayOf: [Function (anonymous)]
+      },
+      isCommunityResourcable: [Function: isCommunityResourcable],
+      isCommunityResource: [Function: isCommunityResource],
+      showThrottleMessage: [Function: showThrottleMessage],
+      getDefaultProvider: [Function: getDefaultProvider]
+    },
+    getDefaultProvider: [Function: getDefaultProvider],
+    Wordlist: [Function: Wordlist] {
+      check: [Function (anonymous)],
+      register: [Function (anonymous)]
+    },
+    wordlists: {
+      cz: LangCz { locale: 'cz' },
+      en: LangEn { locale: 'en' },
+      es: LangEs { locale: 'es' },
+      fr: LangFr { locale: 'fr' },
+      it: LangIt { locale: 'it' },
+      ja: LangJa { locale: 'ja' },
+      ko: LangKo { locale: 'ko' },
+      zh: LangZh { locale: 'zh_cn' },
+      zh_cn: LangZh { locale: 'zh_cn' },
+      zh_tw: LangZh { locale: 'zh_tw' }
+    },
+    utils: {
+      AbiCoder: [Function: AbiCoder],
+      checkResultErrors: [Function: checkResultErrors],
+      defaultAbiCoder: AbiCoder { coerceFunc: null },
+      EventFragment: [Function: EventFragment] {
+        from: [Function (anonymous)],
+        fromObject: [Function (anonymous)],
+        fromString: [Function (anonymous)],
+        isEventFragment: [Function (anonymous)]
+      },
+      FormatTypes: {
+        sighash: 'sighash',
+        minimal: 'minimal',
+        full: 'full',
+        json: 'json'
+      },
+      Fragment: [Function: Fragment] {
+        from: [Function (anonymous)],
+        fromObject: [Function (anonymous)],
+        fromString: [Function (anonymous)],
+        isFragment: [Function (anonymous)]
+      },
+      FunctionFragment: [Function: FunctionFragment] {
+        from: [Function (anonymous)],
+        fromObject: [Function (anonymous)],
+        fromString: [Function (anonymous)],
+        isFunctionFragment: [Function (anonymous)]
+      },
+      Indexed: [Function: Indexed] { isIndexed: [Function (anonymous)] },
+      Interface: [Function: Interface] {
+        getAbiCoder: [Function (anonymous)],
+        getAddress: [Function (anonymous)],
+        getSighash: [Function (anonymous)],
+        getEventTopic: [Function (anonymous)],
+        isInterface: [Function (anonymous)]
+      },
+      LogDescription: [Function: LogDescription],
+      ParamType: [Function: ParamType] {
+        from: [Function (anonymous)],
+        fromObject: [Function (anonymous)],
+        fromString: [Function (anonymous)],
+        isParamType: [Function (anonymous)]
+      },
+      TransactionDescription: [Function: TransactionDescription],
+      getAddress: [Function: getAddress],
+      getCreate2Address: [Function: getCreate2Address],
+      getContractAddress: [Function: getContractAddress],
+      getIcapAddress: [Function: getIcapAddress],
+      isAddress: [Function: isAddress],
+      base64: { decode: [Function: decode], encode: [Function: encode] },
+      base58: BaseX {
+        alphabet: '123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz',
+        base: 58,
+        _alphabetMap: [Object],
+        _leader: '1'
+      },
+      arrayify: [Function: arrayify],
+      concat: [Function: concat],
+      hexConcat: [Function: hexConcat],
+      hexDataSlice: [Function: hexDataSlice],
+      hexDataLength: [Function: hexDataLength],
+      hexlify: [Function: hexlify],
+      hexStripZeros: [Function: hexStripZeros],
+      hexValue: [Function: hexValue],
+      hexZeroPad: [Function: hexZeroPad],
+      isBytes: [Function: isBytes],
+      isBytesLike: [Function: isBytesLike],
+      isHexString: [Function: isHexString],
+      joinSignature: [Function: joinSignature],
+      zeroPad: [Function: zeroPad],
+      splitSignature: [Function: splitSignature],
+      stripZeros: [Function: stripZeros],
+      _TypedDataEncoder: [Function: TypedDataEncoder] {
+        from: [Function (anonymous)],
+        getPrimaryType: [Function (anonymous)],
+        hashStruct: [Function (anonymous)],
+        hashDomain: [Function (anonymous)],
+        encode: [Function (anonymous)],
+        hash: [Function (anonymous)],
+        resolveNames: [Function (anonymous)],
+        getPayload: [Function (anonymous)]
+      },
+      hashMessage: [Function: hashMessage],
+      id: [Function: id],
+      isValidName: [Function: isValidName],
+      namehash: [Function: namehash],
+      defaultPath: "m/44'/60'/0'/0/0",
+      entropyToMnemonic: [Function: entropyToMnemonic],
+      HDNode: [Function: HDNode] {
+        _fromSeed: [Function (anonymous)],
+        fromMnemonic: [Function (anonymous)],
+        fromSeed: [Function (anonymous)],
+        fromExtendedKey: [Function (anonymous)]
+      },
+      isValidMnemonic: [Function: isValidMnemonic],
+      mnemonicToEntropy: [Function: mnemonicToEntropy],
+      mnemonicToSeed: [Function: mnemonicToSeed],
+      getJsonWalletAddress: [Function: getJsonWalletAddress],
+      keccak256: [Function: keccak256],
+      Logger: [Function: Logger] {
+        globalLogger: [Function (anonymous)],
+        setCensorship: [Function (anonymous)],
+        setLogLevel: [Function (anonymous)],
+        errors: [Object],
+        levels: [Object]
+      },
+      computeHmac: [Function: computeHmac],
+      ripemd160: [Function: ripemd160],
+      sha256: [Function: sha256],
+      sha512: [Function: sha512],
+      solidityKeccak256: [Function: keccak256],
+      solidityPack: [Function: pack],
+      soliditySha256: [Function: sha256],
+      randomBytes: [Function: randomBytes],
+      shuffled: [Function: shuffled],
+      checkProperties: [Function: checkProperties],
+      deepCopy: [Function: deepCopy],
+      defineReadOnly: [Function: defineReadOnly],
+      getStatic: [Function: getStatic],
+      resolveProperties: [Function: resolveProperties],
+      shallowCopy: [Function: shallowCopy],
+      RLP: { encode: [Function: encode], decode: [Function: decode] },
+      computePublicKey: [Function: computePublicKey],
+      recoverPublicKey: [Function: recoverPublicKey],
+      SigningKey: [Function: SigningKey] { isSigningKey: [Function (anonymous)] },
+      formatBytes32String: [Function: formatBytes32String],
+      nameprep: [Function: nameprep],
+      parseBytes32String: [Function: parseBytes32String],
+      _toEscapedUtf8String: [Function: _toEscapedUtf8String],
+      toUtf8Bytes: [Function: toUtf8Bytes],
+      toUtf8CodePoints: [Function: toUtf8CodePoints],
+      toUtf8String: [Function: toUtf8String],
+      Utf8ErrorFuncs: {
+        error: [Function: errorFunc],
+        ignore: [Function: ignoreFunc],
+        replace: [Function: replaceFunc]
+      },
+      computeAddress: [Function: computeAddress],
+      parseTransaction: [Function: parse],
+      recoverAddress: [Function: recoverAddress],
+      serializeTransaction: [Function: serialize],
+      commify: [Function: commify],
+      formatEther: [Function: formatEther],
+      parseEther: [Function: parseEther],
+      formatUnits: [Function: formatUnits],
+      parseUnits: [Function: parseUnits],
+      verifyMessage: [Function: verifyMessage],
+      verifyTypedData: [Function: verifyTypedData],
+      _fetchData: [Function: _fetchData],
+      fetchJson: [Function: fetchJson],
+      poll: [Function: poll],
+      SupportedAlgorithm: { sha256: 'sha256', sha512: 'sha512' },
+      UnicodeNormalizationForm: { current: '', NFC: 'NFC', NFD: 'NFD', NFKC: 'NFKC', NFKD: 'NFKD' },
+      Utf8ErrorReason: {
+        UNEXPECTED_CONTINUE: 'unexpected continuation byte',
+        BAD_PREFIX: 'bad codepoint prefix',
+        OVERRUN: 'string overrun',
+        MISSING_CONTINUE: 'missing continuation byte',
+        OUT_OF_RANGE: 'out of UTF-8 range',
+        UTF16_SURROGATE: 'UTF-16 surrogate',
+        OVERLONG: 'overlong representation'
+      }
+    },
+    errors: {
+      UNKNOWN_ERROR: 'UNKNOWN_ERROR',
+      NOT_IMPLEMENTED: 'NOT_IMPLEMENTED',
+      UNSUPPORTED_OPERATION: 'UNSUPPORTED_OPERATION',
+      NETWORK_ERROR: 'NETWORK_ERROR',
+      SERVER_ERROR: 'SERVER_ERROR',
+      TIMEOUT: 'TIMEOUT',
+      BUFFER_OVERRUN: 'BUFFER_OVERRUN',
+      NUMERIC_FAULT: 'NUMERIC_FAULT',
+      MISSING_NEW: 'MISSING_NEW',
+      INVALID_ARGUMENT: 'INVALID_ARGUMENT',
+      MISSING_ARGUMENT: 'MISSING_ARGUMENT',
+      UNEXPECTED_ARGUMENT: 'UNEXPECTED_ARGUMENT',
+      CALL_EXCEPTION: 'CALL_EXCEPTION',
+      INSUFFICIENT_FUNDS: 'INSUFFICIENT_FUNDS',
+      NONCE_EXPIRED: 'NONCE_EXPIRED',
+      REPLACEMENT_UNDERPRICED: 'REPLACEMENT_UNDERPRICED',
+      UNPREDICTABLE_GAS_LIMIT: 'UNPREDICTABLE_GAS_LIMIT'
+    },
+    version: 'ethers/5.0.19',
+    logger: Logger { version: 'ethers/5.0.19' },
+    provider: EthersProviderWrapper {
+      _isProvider: true,
+      _events: [],
+      _emitted: { block: -2 },
+      formatter: Formatter { formats: [Object] },
+      anyNetwork: false,
+      _networkPromise: Promise { <pending> },
+      _maxInternalBlockNumber: -1024,
+      _lastBlockNumber: -2,
+      _pollingInterval: 4000,
+      _fastQueryDate: 0,
+      connection: { url: 'http://localhost:8545' },
+      _nextId: 42,
+      _hardhatProvider: BackwardsCompatibilityProviderAdapter {
+        _wrapped: AutomaticGasPriceProvider {
+          _wrapped: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          },
+          _wrappedProvider: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          }
+        },
+        _provider: AutomaticGasPriceProvider {
+          _wrapped: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          },
+          _wrappedProvider: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          }
+        },
+        sendAsync: [Function: bound sendAsync],
+        send: [Function: bound send],
+        _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+      }
+    },
+    getSigners: [AsyncFunction: getSigners],
+    getContractFactory: [Function: bound getContractFactory] AsyncFunction,
+    getContractAt: [Function: bound getContractAt] AsyncFunction
+  },
+  waffle: {
+    provider: WaffleMockProviderAdapter {
+      _isProvider: true,
+      _events: [],
+      _emitted: { block: -2 },
+      formatter: Formatter { formats: [Object] },
+      anyNetwork: false,
+      _networkPromise: Promise { <pending> },
+      _maxInternalBlockNumber: -1024,
+      _lastBlockNumber: -2,
+      _pollingInterval: 4000,
+      _fastQueryDate: 0,
+      connection: { url: 'http://localhost:8545' },
+      _nextId: 42,
+      _hardhatNetwork: {
+        name: 'ganache',
+        config: [Object],
+        provider: BackwardsCompatibilityProviderAdapter {
+          _wrapped: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          _provider: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          sendAsync: [Function: bound sendAsync],
+          send: [Function: bound send],
+          _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+        }
+      }
+    },
+    deployContract: [Function: bound hardhatDeployContract] AsyncFunction,
+    deployMockContract: [AsyncFunction: deployMockContract],
+    solidity: { waffleChai: [Function: waffleChai] },
+    createFixtureLoader: [Function: bound hardhatCreateFixtureLoader],
+    loadFixture: [AsyncFunction: load],
+    link: [Function: link]
+  },
+  Web3: [Function: Web3] {
+    version: '1.3.0',
+    utils: {
+      _fireError: [Function: _fireError],
+      _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+      _flattenTypes: [Function: _flattenTypes],
+      randomHex: [Function: randomHex],
+      _: <ref *1> [Function: _] {
+        _: [Circular *1],
+        VERSION: '1.9.1',
+        iteratee: [Function: builtinIteratee],
+        forEach: [Function (anonymous)],
+        each: [Function (anonymous)],
+        collect: [Function (anonymous)],
+        map: [Function (anonymous)],
+        inject: [Function (anonymous)],
+        foldl: [Function (anonymous)],
+        reduce: [Function (anonymous)],
+        foldr: [Function (anonymous)],
+        reduceRight: [Function (anonymous)],
+        detect: [Function (anonymous)],
+        find: [Function (anonymous)],
+        select: [Function (anonymous)],
+        filter: [Function (anonymous)],
+        reject: [Function (anonymous)],
+        all: [Function (anonymous)],
+        every: [Function (anonymous)],
+        any: [Function (anonymous)],
+        some: [Function (anonymous)],
+        include: [Function (anonymous)],
+        includes: [Function (anonymous)],
+        contains: [Function (anonymous)],
+        invoke: [Function (anonymous)],
+        pluck: [Function (anonymous)],
+        where: [Function (anonymous)],
+        findWhere: [Function (anonymous)],
+        max: [Function (anonymous)],
+        min: [Function (anonymous)],
+        shuffle: [Function (anonymous)],
+        sample: [Function (anonymous)],
+        sortBy: [Function (anonymous)],
+        groupBy: [Function (anonymous)],
+        indexBy: [Function (anonymous)],
+        countBy: [Function (anonymous)],
+        toArray: [Function (anonymous)],
+        size: [Function (anonymous)],
+        partition: [Function (anonymous)],
+        take: [Function (anonymous)],
+        head: [Function (anonymous)],
+        first: [Function (anonymous)],
+        initial: [Function (anonymous)],
+        last: [Function (anonymous)],
+        drop: [Function (anonymous)],
+        tail: [Function (anonymous)],
+        rest: [Function (anonymous)],
+        compact: [Function (anonymous)],
+        flatten: [Function (anonymous)],
+        without: [Function (anonymous)],
+        unique: [Function (anonymous)],
+        uniq: [Function (anonymous)],
+        union: [Function (anonymous)],
+        intersection: [Function (anonymous)],
+        difference: [Function (anonymous)],
+        unzip: [Function (anonymous)],
+        zip: [Function (anonymous)],
+        object: [Function (anonymous)],
+        findIndex: [Function (anonymous)],
+        findLastIndex: [Function (anonymous)],
+        sortedIndex: [Function (anonymous)],
+        indexOf: [Function (anonymous)],
+        lastIndexOf: [Function (anonymous)],
+        range: [Function (anonymous)],
+        chunk: [Function (anonymous)],
+        bind: [Function (anonymous)],
+        partial: [Function],
+        bindAll: [Function (anonymous)],
+        memoize: [Function (anonymous)],
+        delay: [Function (anonymous)],
+        defer: [Function: bound],
+        throttle: [Function (anonymous)],
+        debounce: [Function (anonymous)],
+        wrap: [Function (anonymous)],
+        negate: [Function (anonymous)],
+        compose: [Function (anonymous)],
+        after: [Function (anonymous)],
+        before: [Function (anonymous)],
+        once: [Function: bound],
+        restArguments: [Function: restArguments],
+        keys: [Function (anonymous)],
+        allKeys: [Function (anonymous)],
+        values: [Function (anonymous)],
+        mapObject: [Function (anonymous)],
+        pairs: [Function (anonymous)],
+        invert: [Function (anonymous)],
+        methods: [Function (anonymous)],
+        functions: [Function (anonymous)],
+        extend: [Function (anonymous)],
+        assign: [Function (anonymous)],
+        extendOwn: [Function (anonymous)],
+        findKey: [Function (anonymous)],
+        pick: [Function (anonymous)],
+        omit: [Function (anonymous)],
+        defaults: [Function (anonymous)],
+        create: [Function (anonymous)],
+        clone: [Function (anonymous)],
+        tap: [Function (anonymous)],
+        isMatch: [Function (anonymous)],
+        isEqual: [Function (anonymous)],
+        isEmpty: [Function (anonymous)],
+        isElement: [Function (anonymous)],
+        isArray: [Function: isArray],
+        isObject: [Function (anonymous)],
+        isArguments: [Function (anonymous)],
+        isFunction: [Function (anonymous)],
+        isString: [Function (anonymous)],
+        isNumber: [Function (anonymous)],
+        isDate: [Function (anonymous)],
+        isRegExp: [Function (anonymous)],
+        isError: [Function (anonymous)],
+        isSymbol: [Function (anonymous)],
+        isMap: [Function (anonymous)],
+        isWeakMap: [Function (anonymous)],
+        isSet: [Function (anonymous)],
+        isWeakSet: [Function (anonymous)],
+        isFinite: [Function (anonymous)],
+        isNaN: [Function (anonymous)],
+        isBoolean: [Function (anonymous)],
+        isNull: [Function (anonymous)],
+        isUndefined: [Function (anonymous)],
+        has: [Function (anonymous)],
+        noConflict: [Function (anonymous)],
+        identity: [Function (anonymous)],
+        constant: [Function (anonymous)],
+        noop: [Function (anonymous)],
+        property: [Function (anonymous)],
+        propertyOf: [Function (anonymous)],
+        matches: [Function (anonymous)],
+        matcher: [Function (anonymous)],
+        times: [Function (anonymous)],
+        random: [Function (anonymous)],
+        now: [Function: now],
+        escape: [Function (anonymous)],
+        unescape: [Function (anonymous)],
+        result: [Function (anonymous)],
+        uniqueId: [Function (anonymous)],
+        templateSettings: [Object],
+        template: [Function (anonymous)],
+        chain: [Function (anonymous)],
+        mixin: [Function (anonymous)]
+      },
+      BN: <ref *2> [Function: BN] {
+        BN: [Circular *2],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont]
+      },
+      isBN: [Function: isBN],
+      isBigNumber: [Function: isBigNumber],
+      isHex: [Function: isHex],
+      isHexStrict: [Function: isHexStrict],
+      sha3: [Function: sha3] { _Hash: [Object] },
+      sha3Raw: [Function: sha3Raw],
+      keccak256: [Function: sha3] { _Hash: [Object] },
+      soliditySha3: [Function: soliditySha3],
+      soliditySha3Raw: [Function: soliditySha3Raw],
+      encodePacked: [Function: encodePacked],
+      isAddress: [Function: isAddress],
+      checkAddressChecksum: [Function: checkAddressChecksum],
+      toChecksumAddress: [Function: toChecksumAddress],
+      toHex: [Function: toHex],
+      toBN: [Function: toBN],
+      bytesToHex: [Function: bytesToHex],
+      hexToBytes: [Function: hexToBytes],
+      hexToNumberString: [Function: hexToNumberString],
+      hexToNumber: [Function: hexToNumber],
+      toDecimal: [Function: hexToNumber],
+      numberToHex: [Function: numberToHex],
+      fromDecimal: [Function: numberToHex],
+      hexToUtf8: [Function: hexToUtf8],
+      hexToString: [Function: hexToUtf8],
+      toUtf8: [Function: hexToUtf8],
+      utf8ToHex: [Function: utf8ToHex],
+      stringToHex: [Function: utf8ToHex],
+      fromUtf8: [Function: utf8ToHex],
+      hexToAscii: [Function: hexToAscii],
+      toAscii: [Function: hexToAscii],
+      asciiToHex: [Function: asciiToHex],
+      fromAscii: [Function: asciiToHex],
+      unitMap: {
+        noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000'
+      },
+      toWei: [Function: toWei],
+      fromWei: [Function: fromWei],
+      padLeft: [Function: leftPad],
+      leftPad: [Function: leftPad],
+      padRight: [Function: rightPad],
+      rightPad: [Function: rightPad],
+      toTwosComplement: [Function: toTwosComplement],
+      isBloom: [Function: isBloom],
+      isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+      isContractAddressInBloom: [Function: isContractAddressInBloom],
+      isTopic: [Function: isTopic],
+      isTopicInBloom: [Function: isTopicInBloom],
+      isInBloom: [Function: isInBloom],
+      compareBlockNumbers: [Function: compareBlockNumbers]
+    },
+    modules: {
+      Eth: [Function: Eth] { givenProvider: null, providers: [Object] },
+      Net: [Function: Net] { givenProvider: null, providers: [Object] },
+      Personal: [Function: Personal] { givenProvider: null, providers: [Object] },
+      Shh: [Function: Shh] { givenProvider: null, providers: [Object] },
+      Bzz: [Function: Bzz] { givenProvider: null }
+    },
+    givenProvider: null,
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    }
+  },
+  web3: Web3 {
+    currentProvider: [Getter/Setter],
+    _requestManager: RequestManager {
+      provider: Web3HTTPProviderAdapter {
+        _provider: BackwardsCompatibilityProviderAdapter {
+          _wrapped: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          _provider: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          sendAsync: [Function: bound sendAsync],
+          send: [Function: bound send],
+          _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+        },
+        send: [Function: bound send],
+        isConnected: [Function: bound isConnected],
+        _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+      },
+      providers: {
+        WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider]
+      },
+      subscriptions: Map(0) {}
+    },
+    givenProvider: null,
+    providers: {
+      WebsocketProvider: [Function: WebsocketProvider],
+      HttpProvider: [Function: HttpProvider],
+      IpcProvider: [Function: IpcProvider]
+    },
+    _provider: Web3HTTPProviderAdapter {
+      _provider: BackwardsCompatibilityProviderAdapter {
+        _wrapped: AutomaticGasPriceProvider {
+          _wrapped: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          },
+          _wrappedProvider: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          }
+        },
+        _provider: AutomaticGasPriceProvider {
+          _wrapped: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          },
+          _wrappedProvider: AutomaticGasProvider {
+            _wrapped: [AutomaticSenderProvider],
+            _wrappedProvider: [AutomaticSenderProvider],
+            _gasMultiplier: 1
+          }
+        },
+        sendAsync: [Function: bound sendAsync],
+        send: [Function: bound send],
+        _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+      },
+      send: [Function: bound send],
+      isConnected: [Function: bound isConnected],
+      _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+    },
+    setProvider: [Function (anonymous)],
+    setRequestManager: [Function (anonymous)],
+    BatchRequest: [Function: bound Batch],
+    extend: [Function: ex] {
+      formatters: {
+        inputDefaultBlockNumberFormatter: [Function: inputDefaultBlockNumberFormatter],
+        inputBlockNumberFormatter: [Function: inputBlockNumberFormatter],
+        inputCallFormatter: [Function: inputCallFormatter],
+        inputTransactionFormatter: [Function: inputTransactionFormatter],
+        inputAddressFormatter: [Function: inputAddressFormatter],
+        inputPostFormatter: [Function: inputPostFormatter],
+        inputLogFormatter: [Function: inputLogFormatter],
+        inputSignFormatter: [Function: inputSignFormatter],
+        inputStorageKeysFormatter: [Function: inputStorageKeysFormatter],
+        outputProofFormatter: [Function: outputProofFormatter],
+        outputBigNumberFormatter: [Function: outputBigNumberFormatter],
+        outputTransactionFormatter: [Function: outputTransactionFormatter],
+        outputTransactionReceiptFormatter: [Function: outputTransactionReceiptFormatter],
+        outputBlockFormatter: [Function: outputBlockFormatter],
+        outputLogFormatter: [Function: outputLogFormatter],
+        outputPostFormatter: [Function: outputPostFormatter],
+        outputSyncingFormatter: [Function: outputSyncingFormatter]
+      },
+      utils: {
+        _fireError: [Function: _fireError],
+        _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+        _flattenTypes: [Function: _flattenTypes],
+        randomHex: [Function: randomHex],
+        _: [Function],
+        BN: [Function],
+        isBN: [Function: isBN],
+        isBigNumber: [Function: isBigNumber],
+        isHex: [Function: isHex],
+        isHexStrict: [Function: isHexStrict],
+        sha3: [Function],
+        sha3Raw: [Function: sha3Raw],
+        keccak256: [Function],
+        soliditySha3: [Function: soliditySha3],
+        soliditySha3Raw: [Function: soliditySha3Raw],
+        encodePacked: [Function: encodePacked],
+        isAddress: [Function: isAddress],
+        checkAddressChecksum: [Function: checkAddressChecksum],
+        toChecksumAddress: [Function: toChecksumAddress],
+        toHex: [Function: toHex],
+        toBN: [Function: toBN],
+        bytesToHex: [Function: bytesToHex],
+        hexToBytes: [Function: hexToBytes],
+        hexToNumberString: [Function: hexToNumberString],
+        hexToNumber: [Function: hexToNumber],
+        toDecimal: [Function: hexToNumber],
+        numberToHex: [Function: numberToHex],
+        fromDecimal: [Function: numberToHex],
+        hexToUtf8: [Function: hexToUtf8],
+        hexToString: [Function: hexToUtf8],
+        toUtf8: [Function: hexToUtf8],
+        utf8ToHex: [Function: utf8ToHex],
+        stringToHex: [Function: utf8ToHex],
+        fromUtf8: [Function: utf8ToHex],
+        hexToAscii: [Function: hexToAscii],
+        toAscii: [Function: hexToAscii],
+        asciiToHex: [Function: asciiToHex],
+        fromAscii: [Function: asciiToHex],
+        unitMap: [Object],
+        toWei: [Function: toWei],
+        fromWei: [Function: fromWei],
+        padLeft: [Function: leftPad],
+        leftPad: [Function: leftPad],
+        padRight: [Function: rightPad],
+        rightPad: [Function: rightPad],
+        toTwosComplement: [Function: toTwosComplement],
+        isBloom: [Function: isBloom],
+        isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+        isContractAddressInBloom: [Function: isContractAddressInBloom],
+        isTopic: [Function: isTopic],
+        isTopicInBloom: [Function: isTopicInBloom],
+        isInBloom: [Function: isInBloom],
+        compareBlockNumbers: [Function: compareBlockNumbers]
+      },
+      Method: [Function: Method]
+    },
+    version: '1.3.0',
+    utils: {
+      _fireError: [Function: _fireError],
+      _jsonInterfaceMethodToString: [Function: _jsonInterfaceMethodToString],
+      _flattenTypes: [Function: _flattenTypes],
+      randomHex: [Function: randomHex],
+      _: <ref *1> [Function: _] {
+        _: [Circular *1],
+        VERSION: '1.9.1',
+        iteratee: [Function: builtinIteratee],
+        forEach: [Function (anonymous)],
+        each: [Function (anonymous)],
+        collect: [Function (anonymous)],
+        map: [Function (anonymous)],
+        inject: [Function (anonymous)],
+        foldl: [Function (anonymous)],
+        reduce: [Function (anonymous)],
+        foldr: [Function (anonymous)],
+        reduceRight: [Function (anonymous)],
+        detect: [Function (anonymous)],
+        find: [Function (anonymous)],
+        select: [Function (anonymous)],
+        filter: [Function (anonymous)],
+        reject: [Function (anonymous)],
+        all: [Function (anonymous)],
+        every: [Function (anonymous)],
+        any: [Function (anonymous)],
+        some: [Function (anonymous)],
+        include: [Function (anonymous)],
+        includes: [Function (anonymous)],
+        contains: [Function (anonymous)],
+        invoke: [Function (anonymous)],
+        pluck: [Function (anonymous)],
+        where: [Function (anonymous)],
+        findWhere: [Function (anonymous)],
+        max: [Function (anonymous)],
+        min: [Function (anonymous)],
+        shuffle: [Function (anonymous)],
+        sample: [Function (anonymous)],
+        sortBy: [Function (anonymous)],
+        groupBy: [Function (anonymous)],
+        indexBy: [Function (anonymous)],
+        countBy: [Function (anonymous)],
+        toArray: [Function (anonymous)],
+        size: [Function (anonymous)],
+        partition: [Function (anonymous)],
+        take: [Function (anonymous)],
+        head: [Function (anonymous)],
+        first: [Function (anonymous)],
+        initial: [Function (anonymous)],
+        last: [Function (anonymous)],
+        drop: [Function (anonymous)],
+        tail: [Function (anonymous)],
+        rest: [Function (anonymous)],
+        compact: [Function (anonymous)],
+        flatten: [Function (anonymous)],
+        without: [Function (anonymous)],
+        unique: [Function (anonymous)],
+        uniq: [Function (anonymous)],
+        union: [Function (anonymous)],
+        intersection: [Function (anonymous)],
+        difference: [Function (anonymous)],
+        unzip: [Function (anonymous)],
+        zip: [Function (anonymous)],
+        object: [Function (anonymous)],
+        findIndex: [Function (anonymous)],
+        findLastIndex: [Function (anonymous)],
+        sortedIndex: [Function (anonymous)],
+        indexOf: [Function (anonymous)],
+        lastIndexOf: [Function (anonymous)],
+        range: [Function (anonymous)],
+        chunk: [Function (anonymous)],
+        bind: [Function (anonymous)],
+        partial: [Function],
+        bindAll: [Function (anonymous)],
+        memoize: [Function (anonymous)],
+        delay: [Function (anonymous)],
+        defer: [Function: bound],
+        throttle: [Function (anonymous)],
+        debounce: [Function (anonymous)],
+        wrap: [Function (anonymous)],
+        negate: [Function (anonymous)],
+        compose: [Function (anonymous)],
+        after: [Function (anonymous)],
+        before: [Function (anonymous)],
+        once: [Function: bound],
+        restArguments: [Function: restArguments],
+        keys: [Function (anonymous)],
+        allKeys: [Function (anonymous)],
+        values: [Function (anonymous)],
+        mapObject: [Function (anonymous)],
+        pairs: [Function (anonymous)],
+        invert: [Function (anonymous)],
+        methods: [Function (anonymous)],
+        functions: [Function (anonymous)],
+        extend: [Function (anonymous)],
+        assign: [Function (anonymous)],
+        extendOwn: [Function (anonymous)],
+        findKey: [Function (anonymous)],
+        pick: [Function (anonymous)],
+        omit: [Function (anonymous)],
+        defaults: [Function (anonymous)],
+        create: [Function (anonymous)],
+        clone: [Function (anonymous)],
+        tap: [Function (anonymous)],
+        isMatch: [Function (anonymous)],
+        isEqual: [Function (anonymous)],
+        isEmpty: [Function (anonymous)],
+        isElement: [Function (anonymous)],
+        isArray: [Function: isArray],
+        isObject: [Function (anonymous)],
+        isArguments: [Function (anonymous)],
+        isFunction: [Function (anonymous)],
+        isString: [Function (anonymous)],
+        isNumber: [Function (anonymous)],
+        isDate: [Function (anonymous)],
+        isRegExp: [Function (anonymous)],
+        isError: [Function (anonymous)],
+        isSymbol: [Function (anonymous)],
+        isMap: [Function (anonymous)],
+        isWeakMap: [Function (anonymous)],
+        isSet: [Function (anonymous)],
+        isWeakSet: [Function (anonymous)],
+        isFinite: [Function (anonymous)],
+        isNaN: [Function (anonymous)],
+        isBoolean: [Function (anonymous)],
+        isNull: [Function (anonymous)],
+        isUndefined: [Function (anonymous)],
+        has: [Function (anonymous)],
+        noConflict: [Function (anonymous)],
+        identity: [Function (anonymous)],
+        constant: [Function (anonymous)],
+        noop: [Function (anonymous)],
+        property: [Function (anonymous)],
+        propertyOf: [Function (anonymous)],
+        matches: [Function (anonymous)],
+        matcher: [Function (anonymous)],
+        times: [Function (anonymous)],
+        random: [Function (anonymous)],
+        now: [Function: now],
+        escape: [Function (anonymous)],
+        unescape: [Function (anonymous)],
+        result: [Function (anonymous)],
+        uniqueId: [Function (anonymous)],
+        templateSettings: [Object],
+        template: [Function (anonymous)],
+        chain: [Function (anonymous)],
+        mixin: [Function (anonymous)]
+      },
+      BN: <ref *2> [Function: BN] {
+        BN: [Circular *2],
+        wordSize: 26,
+        isBN: [Function: isBN],
+        max: [Function: max],
+        min: [Function: min],
+        red: [Function: red],
+        _prime: [Function: prime],
+        mont: [Function: mont]
+      },
+      isBN: [Function: isBN],
+      isBigNumber: [Function: isBigNumber],
+      isHex: [Function: isHex],
+      isHexStrict: [Function: isHexStrict],
+      sha3: [Function: sha3] { _Hash: [Object] },
+      sha3Raw: [Function: sha3Raw],
+      keccak256: [Function: sha3] { _Hash: [Object] },
+      soliditySha3: [Function: soliditySha3],
+      soliditySha3Raw: [Function: soliditySha3Raw],
+      encodePacked: [Function: encodePacked],
+      isAddress: [Function: isAddress],
+      checkAddressChecksum: [Function: checkAddressChecksum],
+      toChecksumAddress: [Function: toChecksumAddress],
+      toHex: [Function: toHex],
+      toBN: [Function: toBN],
+      bytesToHex: [Function: bytesToHex],
+      hexToBytes: [Function: hexToBytes],
+      hexToNumberString: [Function: hexToNumberString],
+      hexToNumber: [Function: hexToNumber],
+      toDecimal: [Function: hexToNumber],
+      numberToHex: [Function: numberToHex],
+      fromDecimal: [Function: numberToHex],
+      hexToUtf8: [Function: hexToUtf8],
+      hexToString: [Function: hexToUtf8],
+      toUtf8: [Function: hexToUtf8],
+      utf8ToHex: [Function: utf8ToHex],
+      stringToHex: [Function: utf8ToHex],
+      fromUtf8: [Function: utf8ToHex],
+      hexToAscii: [Function: hexToAscii],
+      toAscii: [Function: hexToAscii],
+      asciiToHex: [Function: asciiToHex],
+      fromAscii: [Function: asciiToHex],
+      unitMap: {
+        noether: '0',
+        wei: '1',
+        kwei: '1000',
+        Kwei: '1000',
+        babbage: '1000',
+        femtoether: '1000',
+        mwei: '1000000',
+        Mwei: '1000000',
+        lovelace: '1000000',
+        picoether: '1000000',
+        gwei: '1000000000',
+        Gwei: '1000000000',
+        shannon: '1000000000',
+        nanoether: '1000000000',
+        nano: '1000000000',
+        szabo: '1000000000000',
+        microether: '1000000000000',
+        micro: '1000000000000',
+        finney: '1000000000000000',
+        milliether: '1000000000000000',
+        milli: '1000000000000000',
+        ether: '1000000000000000000',
+        kether: '1000000000000000000000',
+        grand: '1000000000000000000000',
+        mether: '1000000000000000000000000',
+        gether: '1000000000000000000000000000',
+        tether: '1000000000000000000000000000000'
+      },
+      toWei: [Function: toWei],
+      fromWei: [Function: fromWei],
+      padLeft: [Function: leftPad],
+      leftPad: [Function: leftPad],
+      padRight: [Function: rightPad],
+      rightPad: [Function: rightPad],
+      toTwosComplement: [Function: toTwosComplement],
+      isBloom: [Function: isBloom],
+      isUserEthereumAddressInBloom: [Function: isUserEthereumAddressInBloom],
+      isContractAddressInBloom: [Function: isContractAddressInBloom],
+      isTopic: [Function: isTopic],
+      isTopicInBloom: [Function: isTopicInBloom],
+      isInBloom: [Function: isInBloom],
+      compareBlockNumbers: [Function: compareBlockNumbers]
+    },
+    eth: <ref *3> Eth {
+      currentProvider: [Getter/Setter],
+      _requestManager: RequestManager {
+        provider: [Web3HTTPProviderAdapter],
+        providers: [Object],
+        subscriptions: Map(0) {}
+      },
+      givenProvider: null,
+      providers: {
+        WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider]
+      },
+      _provider: Web3HTTPProviderAdapter {
+        _provider: BackwardsCompatibilityProviderAdapter {
+          _wrapped: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          _provider: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          sendAsync: [Function: bound sendAsync],
+          send: [Function: bound send],
+          _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+        },
+        send: [Function: bound send],
+        isConnected: [Function: bound isConnected],
+        _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+      },
+      setProvider: [Function (anonymous)],
+      setRequestManager: [Function (anonymous)],
+      BatchRequest: [Function: bound Batch],
+      extend: [Function: ex] {
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method]
+      },
+      handleRevert: [Getter/Setter],
+      defaultCommon: [Getter/Setter],
+      defaultHardfork: [Getter/Setter],
+      defaultChain: [Getter/Setter],
+      transactionPollingTimeout: [Getter/Setter],
+      transactionConfirmationBlocks: [Getter/Setter],
+      transactionBlockTimeout: [Getter/Setter],
+      defaultAccount: [Getter/Setter],
+      defaultBlock: [Getter/Setter],
+      maxListenersWarningThreshold: [Getter/Setter],
+      clearSubscriptions: [Function: bound ],
+      net: Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [Web3HTTPProviderAdapter],
+        setProvider: [Function (anonymous)],
+        setRequestManager: [Function (anonymous)],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function],
+        getNetworkType: [Function: bound getNetworkType]
+      },
+      accounts: Accounts {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [Web3HTTPProviderAdapter],
+        setProvider: [Function (anonymous)],
+        setRequestManager: [Function (anonymous)],
+        _ethereumCall: [Object],
+        wallet: [Wallet]
+      },
+      personal: Personal {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [Web3HTTPProviderAdapter],
+        setProvider: [Function (anonymous)],
+        setRequestManager: [Function (anonymous)],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        net: [Net],
+        defaultAccount: [Getter/Setter],
+        defaultBlock: [Getter/Setter],
+        getAccounts: [Function],
+        newAccount: [Function],
+        unlockAccount: [Function],
+        lockAccount: [Function],
+        importRawKey: [Function],
+        sendTransaction: [Function],
+        signTransaction: [Function],
+        sign: [Function],
+        ecRecover: [Function]
+      },
+      Contract: [Function: Contract] {
+        setProvider: [Function (anonymous)],
+        defaultAccount: null,
+        defaultBlock: 'latest',
+        transactionBlockTimeout: 50,
+        transactionConfirmationBlocks: 24,
+        transactionPollingTimeout: 750,
+        handleRevert: false,
+        _requestManager: [RequestManager],
+        _ethAccounts: [Accounts],
+        currentProvider: [Web3HTTPProviderAdapter]
+      },
+      Iban: [Function: Iban] {
+        toAddress: [Function (anonymous)],
+        toIban: [Function (anonymous)],
+        fromAddress: [Function (anonymous)],
+        fromBban: [Function (anonymous)],
+        createIndirect: [Function (anonymous)],
+        isValid: [Function (anonymous)]
+      },
+      abi: ABICoder {},
+      ens: ENS {
+        eth: [Circular *3],
+        _detectedAddress: null,
+        _lastSyncCheck: null,
+        registry: [Getter],
+        resolverMethodHandler: [Getter],
+        registryAddress: [Getter/Setter]
+      },
+      getNodeInfo: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'web3_clientVersion'
+      },
+      getProtocolVersion: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_protocolVersion'
+      },
+      getCoinbase: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_coinbase'
+      },
+      isMining: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_mining'
+      },
+      getHashrate: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_hashrate'
+      },
+      isSyncing: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_syncing'
+      },
+      getGasPrice: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_gasPrice'
+      },
+      getAccounts: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_accounts'
+      },
+      getBlockNumber: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_blockNumber'
+      },
+      getBalance: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getBalance'
+      },
+      getStorageAt: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getStorageAt'
+      },
+      getCode: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getCode'
+      },
+      getBlock: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: blockCall]
+      },
+      getUncle: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCall]
+      },
+      getBlockTransactionCount: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: getBlockTransactionCountCall]
+      },
+      getBlockUncleCount: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: uncleCountCall]
+      },
+      getTransaction: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionByHash'
+      },
+      getTransactionFromBlock: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: [Function: transactionFromBlockCall]
+      },
+      getTransactionReceipt: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionReceipt'
+      },
+      getTransactionCount: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getTransactionCount'
+      },
+      sendSignedTransaction: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendRawTransaction'
+      },
+      signTransaction: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_signTransaction'
+      },
+      sendTransaction: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sendTransaction'
+      },
+      sign: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_sign'
+      },
+      call: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_call'
+      },
+      estimateGas: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_estimateGas'
+      },
+      submitWork: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_submitWork'
+      },
+      getWork: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getWork'
+      },
+      getPastLogs: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getLogs'
+      },
+      getChainId: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_chainId'
+      },
+      requestAccounts: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_requestAccounts'
+      },
+      getProof: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_getProof'
+      },
+      getPendingTransactions: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'eth_pendingTransactions'
+      },
+      subscribe: [Function (anonymous)]
+    },
+    shh: Shh {
+      currentProvider: [Getter/Setter],
+      _requestManager: RequestManager {
+        provider: [Web3HTTPProviderAdapter],
+        providers: [Object],
+        subscriptions: Map(0) {}
+      },
+      givenProvider: null,
+      providers: {
+        WebsocketProvider: [Function: WebsocketProvider],
+        HttpProvider: [Function: HttpProvider],
+        IpcProvider: [Function: IpcProvider]
+      },
+      _provider: Web3HTTPProviderAdapter {
+        _provider: BackwardsCompatibilityProviderAdapter {
+          _wrapped: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          _provider: AutomaticGasPriceProvider {
+            _wrapped: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            },
+            _wrappedProvider: AutomaticGasProvider {
+              _wrapped: [AutomaticSenderProvider],
+              _wrappedProvider: [AutomaticSenderProvider],
+              _gasMultiplier: 1
+            }
+          },
+          sendAsync: [Function: bound sendAsync],
+          send: [Function: bound send],
+          _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+        },
+        send: [Function: bound send],
+        isConnected: [Function: bound isConnected],
+        _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+      },
+      setProvider: [Function (anonymous)],
+      setRequestManager: [Function (anonymous)],
+      BatchRequest: [Function: bound Batch],
+      extend: [Function: ex] {
+        formatters: [Object],
+        utils: [Object],
+        Method: [Function: Method]
+      },
+      net: Net {
+        currentProvider: [Getter/Setter],
+        _requestManager: [RequestManager],
+        givenProvider: null,
+        providers: [Object],
+        _provider: [Web3HTTPProviderAdapter],
+        setProvider: [Function (anonymous)],
+        setRequestManager: [Function (anonymous)],
+        BatchRequest: [Function: bound Batch],
+        extend: [Function],
+        getId: [Function],
+        isListening: [Function],
+        getPeerCount: [Function]
+      },
+      subscribe: [Function (anonymous)],
+      getVersion: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_version'
+      },
+      getInfo: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_info'
+      },
+      setMaxMessageSize: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMaxMessageSize'
+      },
+      setMinPoW: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_setMinPoW'
+      },
+      markTrustedPeer: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_markTrustedPeer'
+      },
+      newKeyPair: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newKeyPair'
+      },
+      addPrivateKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addPrivateKey'
+      },
+      deleteKeyPair: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteKeyPair'
+      },
+      hasKeyPair: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasKeyPair'
+      },
+      getPublicKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPublicKey'
+      },
+      getPrivateKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getPrivateKey'
+      },
+      newSymKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newSymKey'
+      },
+      addSymKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_addSymKey'
+      },
+      generateSymKeyFromPassword: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_generateSymKeyFromPassword'
+      },
+      hasSymKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_hasSymKey'
+      },
+      getSymKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getSymKey'
+      },
+      deleteSymKey: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteSymKey'
+      },
+      newMessageFilter: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_newMessageFilter'
+      },
+      getFilterMessages: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_getFilterMessages'
+      },
+      deleteMessageFilter: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_deleteMessageFilter'
+      },
+      post: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_post'
+      },
+      unsubscribe: [Function: send] {
+        method: [Method],
+        request: [Function: bound ],
+        call: 'shh_unsubscribe'
+      }
+    },
+    bzz: Bzz {
+      givenProvider: null,
+      currentProvider: null,
+      isAvailable: [Function (anonymous)],
+      upload: [Function (anonymous)],
+      download: [Function (anonymous)]
+    }
+  }
+}
+AttributionSplitter deployed to:
+ 0x624D08d54316F2A34B7404dE7582d343651d70f2
+Total Shares: 12
+Payee: 0x99B93130c24e625FE9AFFd93de1Be346088A96EF Shares: 4
+Payee: 0xe81a4767193c84B329d8eF950EcB6b254Ff58716 Shares: 3
+Payee: 0x67820449471AD16B0aE378435f7acc1Dbf5D1f32 Shares: 5
+{
+  name: 'ganache',
+  config: {
+    accounts: 'remote',
+    gas: 'auto',
+    gasPrice: 'auto',
+    gasMultiplier: 1,
+    httpHeaders: {},
+    timeout: 20000,
+    url: 'http://127.0.0.1:7545'
+  },
+  provider: BackwardsCompatibilityProviderAdapter {
+    _wrapped: AutomaticGasPriceProvider {
+      _wrapped: AutomaticGasProvider {
+        _wrapped: [AutomaticSenderProvider],
+        _wrappedProvider: [AutomaticSenderProvider],
+        _gasMultiplier: 1
+      },
+      _wrappedProvider: AutomaticGasProvider {
+        _wrapped: [AutomaticSenderProvider],
+        _wrappedProvider: [AutomaticSenderProvider],
+        _gasMultiplier: 1
+      }
+    },
+    _provider: AutomaticGasPriceProvider {
+      _wrapped: AutomaticGasProvider {
+        _wrapped: [AutomaticSenderProvider],
+        _wrappedProvider: [AutomaticSenderProvider],
+        _gasMultiplier: 1
+      },
+      _wrappedProvider: AutomaticGasProvider {
+        _wrapped: [AutomaticSenderProvider],
+        _wrappedProvider: [AutomaticSenderProvider],
+        _gasMultiplier: 1
+      }
+    },
+    sendAsync: [Function: bound sendAsync],
+    send: [Function: bound send],
+    _sendJsonRpcRequest: [Function: bound _sendJsonRpcRequest] AsyncFunction
+  }
+}
+AttributionSplitter deployed to:
+ 0x48bDFf3f45f6A599820C495589e87c200aAba60d
+Total Shares: 12
+Payee: 0x99B93130c24e625FE9AFFd93de1Be346088A96EF Shares: 4
+Payee: 0xe81a4767193c84B329d8eF950EcB6b254Ff58716 Shares: 3
+Payee: 0x67820449471AD16B0aE378435f7acc1Dbf5D1f32 Shares: 5

@@ -4,6 +4,8 @@
 // standalone fashion through `node <script>`.
 
 const hre = require("hardhat");
+console.log(hre.network);
+
 
 // When running the script with `hardhat run <script>`
 // you'll find the Hardhat Runtime Environment's
