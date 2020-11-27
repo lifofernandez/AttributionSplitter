@@ -1,5 +1,5 @@
 require("@nomiclabs/hardhat-waffle");
-//require("@nomiclabs/hardhat-web3");
+require("@nomiclabs/hardhat-web3");
 
 
 // This is a sample Hardhat task.
@@ -78,6 +78,7 @@ task("network", "Prints an account's balance")
      const web3Provider = new ethers.providers.Web3Provider(provider);
      console.log(web3Provider);
 
+     //const network = ethers.providers.getNetwork("rinkeby");
      //const network = provider.getNetwork();
      //const network = ethers.providers.getNetwork('homestead');
      //const networkName = network.name;
@@ -87,7 +88,6 @@ task("network", "Prints an account's balance")
      //const netWorkId = network.chainId;
      //console.log(netWorkId);
 
-     //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
 });
 
 task("balance", "Prints an account's balance")
@@ -95,12 +95,13 @@ task("balance", "Prints an account's balance")
   .setAction(async taskArgs => {
       //const provider = ethers.getDefaultProvider();
       //const provider = ethers.getDefaultProvider("http://127.0.0.1:7545");
-      const provider = ethers.getDefaultProvider();
-      //const account = web3.utils.toChecksumAddress(taskArgs.account);
-      const balance = await provider.getBalance(taskArgs.account);
+      //const balance = await provider.getBalance(taskArgs.account);
+      //console.log(balance);
 
-      //console.log(web3.utils.fromWei(balance, "ether"), "ETH");
-      console.log(balance);
+      const account = web3.utils.toChecksumAddress(taskArgs.account);
+      const balance = await web3.eth.getBalance(account);
+
+      console.log(web3.utils.fromWei(balance, "ether"), "ETH");
 });
 
 // You need to export an object to set up your config
@@ -122,6 +123,10 @@ module.exports = {
       }
     }
 };
+
+
+
+
 
 
 
