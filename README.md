@@ -1,6 +1,6 @@
 # AttributionSplitter
 
-Gestionar regalías por atribuciones de uso de patente, marca,
+Smart Contract para gestionar regalías por atribuciones de uso de patente, marca,
 franquicia (know-how) y propiedad intelectual, reproducción obra original o
 explotación recursos naturales entre las partes poseedoras de derechos.
 
